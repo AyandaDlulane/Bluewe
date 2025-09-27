@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook – log in or sign up</title>
+    <style>
+        body { background: #f0f2f5; font-family: Arial, sans-serif; }
+        .container { width: 350px; margin: 100px auto; background: #fff; padding: 30px 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+        .logo { text-align: center; margin-bottom: 20px; }
+        .logo img { width: 180px; }
+        .input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; }
+        .login-btn { width: 100%; background: #1877f2; color: #fff; border: none; padding: 12px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+        .login-btn:hover { background: #165ecb; }
+        .forgot { text-align: center; margin: 12px 0; }
+        .create-btn { background: #42b72a; color: #fff; border: none; padding: 12px; border-radius: 6px; width: 60%; margin: 0 auto; display: block; font-size: 16px; cursor: pointer; }
+        .create-btn:hover { background: #36a420; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico" alt="Facebook">
+        </div>
+        <form>
+            <input class="input" type="text" placeholder="Email address or phone number" required>
+            <input class="input" type="password" placeholder="Password" required>
+            <button class="login-btn" type="submit">Log In</button>
+        </form>
+        <div class="forgot">
+            <a href="#">Forgotten password?</a>
+        </div>
+        <hr>
+        <button class="create-btn">Create New Account</button>
+    </div>
+</body>
+</html>
