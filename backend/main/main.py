@@ -34,12 +34,19 @@ async def process_content(request: Request):
 
     prompt = (
         "Analyze the following website. First, determine what the website is trying to be (its purpose or type, such as banking, shopping, social, etc.). "
+        "Then, check the url for legitimacy (e.g., does it match the expected domain for that type of site?). "
         "Then, check if the code and content match this purpose or if there are signs of deception, phishing, or malicious intent. "
+        "Then check if the HTML and JavaScript contain any malicious code or scripts that could harm users or steal data. "
+        "Then, check if the site is trying to mimic another legitimate site (e.g., using similar logos, names, or layouts). "
+        "Then, check for any red flags such as obfuscated code, excessive tracking scripts, or requests for unnecessary permissions. "
+        "Then, check if the site has any pop p-ups, ads, or redirects that could indicate malicious behavior. "
+        "Then, based on your analysis, classify the site as either suspicious/malicious or safe. "
         "If the site is suspicious or malicious, respond with a short warning message, then a comma, then the number 1. "
         "If the site is safe and matches its purpose, respond with a short message, then a comma, then the number 0. "
         "Do not add any extra explanation or formatting. "
         f"Here is the data: URL: {url},HTML: {html_content},JavaScript: {javascript_content}"
     )
+
 
     try:
         response = model.generate_content(prompt)
