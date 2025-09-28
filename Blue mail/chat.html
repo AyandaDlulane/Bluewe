@@ -1,0 +1,32 @@
+<!-- chat.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bluewe — Explanation</title>
+  <style>
+    body { font-family: Arial; padding: 12px; max-width: 700px; }
+    .meta { font-size:13px; color:#666; margin-bottom:8px; }
+    .details { border:1px solid #ddd; padding:10px; background:#fafafa; white-space:pre-wrap; }
+    .ask { margin-top:12px; display:flex; gap:8px; }
+    textarea { flex:1; height:80px; }
+    button { padding:8px 12px; }
+    #responses { margin-top:12px; }
+    .resp { border-top:1px solid #eee; padding:8px 0; }
+  </style>
+</head>
+<body>
+  <h2>Detailed explanation</h2>
+  <div class="meta" id="meta"></div>
+  <div class="details" id="details">Loading...</div>
+
+  <div class="ask">
+    <textarea id="question" placeholder="Ask for more details (optional)"></textarea>
+    <button id="sendBtn">Ask</button>
+  </div>
+
+  <div id="responses"></div>
+
+  <script src="chat.js"></script>
+</body>
+</html>

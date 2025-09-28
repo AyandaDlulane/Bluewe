@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Bluewe mail guard",
+  "description": "Analyzes Gmail emails for phishing and suspicious content using AI backend.",
+  "version": "1.0",
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://your-fastapi-server.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+    
+  }
+  
+}
