@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-genai.configure(api_key="AIzaSyBEz5dIsXp-Y0AW9BxjTCv7c-7HmQtK9qk")
+genai.configure(api_key="API_KEY")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 #every thing before the application starts / varaibles and staff
