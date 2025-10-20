@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 # --- CONFIG ---
-genai.configure(api_key="AIzaSyB7YM9cdqEyjLJp1YN7n33hfvWaYBfQOQ8")
+genai.configure(api_key="key")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 app = FastAPI()
